@@ -1,0 +1,24 @@
+@model IEnumerable<SimpleJobPortal.Models.Application>
+
+<h1>Applications</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Job ID</th>
+            <th>Job Seeker</th>
+            <th>Resume</th>
+            <th>Application Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var application in Model)
+        {
+            <tr>
+                <td>@application.JobID</td>
+                <td>@application.JobSeeker</td>
+                <td>@application.Resume</td>
+                <td>@application.ApplicationDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>
