@@ -1,0 +1,23 @@
+@model SimpleJobPortal.Models.Job
+
+<h1>Post a Job</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Employer"></label>
+        <input asp-for="Employer" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Location"></label>
+        <input asp-for="Location" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Post Job</button>
+</form>
